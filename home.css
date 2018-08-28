@@ -117,15 +117,15 @@ a {
 @media (min-width: 1230px) {
 
   .mainColumn {
-    left: 5%;
+    left: 5px;
   }
 
   .extraContent {
     position: absolute;
     display: block;
     visibility: visible;
-    left: calc(5% + 600px);
-    width: calc(100% - 600px);
+    left: 610px;
+    width: calc(100% - 615px);
     height: 100vh;
   }
 
