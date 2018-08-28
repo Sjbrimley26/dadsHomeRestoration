@@ -1,4 +1,4 @@
-const url = "http://spencer-storage.s3-us-west-2.amazonaws.com";
+const url = "https://spencer-storage.s3-us-west-2.amazonaws.com"; // DEV Only
 
 const main = () => {
 
@@ -25,7 +25,9 @@ const getLinks = async xmlText => {
     xmlText = xmlText.substring(xmlText.indexOf("</Key>") + 6);
   }
 
-  return [ ...keys.filter(key => key !== "gallery/") ];
+  return [ ...keys.filter(key => {
+    return key !== "gallery/" && key.includes("gallery/");
+  }) ];
 };
 
 const startImageCycle = links => {
